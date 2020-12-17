@@ -1,4 +1,53 @@
 '''
+
+ANSWERS FOR QUESTION 5:
+
+5A) 
+3
+1 2
+2 2 
+8 7
+2
+3 3
+4 4
+
+When key does not exist in data 1, the key-value pair is not added to it.
+
+5B) The statement has been added to the code as an 'else' statement
+    
+
+5C) 
+Test case 1:
+4
+1 2 
+3 3
+3 8
+4 9 
+2
+3 3 
+4 4
+
+Test case 2:
+4
+1 2 
+2 2 
+3 3
+4 19
+2
+3 3
+4 19
+
+Test case 3:
+3
+1 2
+2 2 
+8 7
+2
+3 3
+4 4
+
+-----------------------------------------------------------------
+
 This function takes two arguments,
 data1 and data2, which contain
 key-value pairs. All key-value
@@ -53,6 +102,8 @@ def uniqueUpdate(data1, data2):
             else:
                 # Add (k, v2) to data1
                 data1[k] = v2
+        else:
+            data1[k] = data.get(k,v2)
     # After processing all (k, v2) in
     # data2, return the dictionary
     return dupKeys
